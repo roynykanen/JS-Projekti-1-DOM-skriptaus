@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to top, #152e6b, #1d387b, #24418c, #2c4c9d, #3356ae, #395db9, #3f65c5, #456cd0, #4b72d8, #5179e0, #567fe8, #5c86f0);
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 50px; 
+  letter-spacing: 5px; 
+  text-align: center; 
+  color: #152E6B;
+}
+
+p {
+  font-size: 14px; 
+  text-align: center; 
+  margin-top: 10px; 
+  color: black; 
+}
+
+.todo-app {
+  background-color: white;
+  min-height: 400px; 
+  width: 540px; 
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+.row {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 30px; 
+  padding-left: 20px; 
+  margin: 10px 0; 
+  margin-inline: auto; 
+}
+
+input {
+  margin-bottom: 10px; 
+  margin-right: auto; 
+  width: 85%;
+  padding: 10px; 
+  border: none; 
+  border-bottom: 1px solid #ccc;
+  outline: none; 
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button {
+  border: none; 
+  outline: none; 
+  padding: 8px 16px; 
+  border-radius: 35px; 
+  color: white; 
+  font-size: 16px; 
+  cursor: pointer; 
+  background-color: #3D64C6; 
+  float: right; 
+  margin-inline: auto; 
+  transition: .2s ease-in-out;
+}
+
+button:hover {
+  background: #152E6B;
+}
+
+ul {
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px;
+}
+
+ul li {
+  list-style: none; 
+  font-size: 15px;
+  padding: 10px 30px; 
+  user-select: none;
+  min-height: 50px; 
+  border-radius: 80px; 
+  cursor: pointer; 
+  position: relative; 
+  background: rgba(184, 184, 184, 0.507);
+  display: flex;
+  align-items: center; 
+  transition: .2s ease-in-out;
+}
+
+ul li:hover {
+  background: rgba(92, 92, 92, 0.507);
+}
+
+ul li.checked {
+  text-decoration: line-through; /* Add line-through for checked state */
+  background: rgba(92, 92, 92, 0.507); /* Change background color for checked state */
+}
+
+ul li span {
+  position: absolute; 
+  right: 12px; 
+  text-align: center; 
+  width: 40px; 
+  height: 40px; 
+  line-height: 40px; 
+  color: #3D64C6; 
+  transition: .2s ease-in-out; 
+}
+
+ul li span:hover {
+  border-radius: 30px;
+  background: #152E6B;
+  color: white;
+}
+
+ul li i {
+  pointer-events: none;
+}
+
+.scroll {
+  max-height: calc(100vh - 400px); /* Set maximum height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 20px; 
+  scrollbar-width: thin; 
+}
+
+.error {
+  border-bottom: 1px solid red; /* Add red border for error state */
+}
